@@ -10,7 +10,7 @@ function App() {
           The value <code>VITE_THEME</code> determines the color the button below!
         </p>
         <p className="read-the-docs">
-          <a href="https://github.com/davips96/theme-importer-poc"></a>
+          <a href="https://github.com/davips96/theme-importer-poc">Github Repo</a>
         </p>
       </div>
       <ThemedButton onClick={() => {}}>Hello</ThemedButton>
