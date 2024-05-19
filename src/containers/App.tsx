@@ -1,5 +1,4 @@
-import "./App.css";
-import { ThemedButton } from "./ui/button";
+import { ThemedButton } from "../ui/button";
 
 function App() {
   return (

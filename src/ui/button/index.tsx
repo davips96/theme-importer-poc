@@ -1,4 +1,5 @@
 import "./index.css";
+import { clsx } from "clsx";
 
 import { ReactNode, MouseEvent } from "react";
 
@@ -7,29 +8,18 @@ export type ThemedButtonProps = {
   onClick: () => void;
 };
 
-export function getClassNames() {
-  switch (import.meta.env.VITE_THEME) {
-    case "theme-1":
-      return "base__button theme-1__button";
-    case "theme-2":
-      return "base__button theme-2__button";
-    case "theme-3":
-      return "base__button theme-3__button";
-    case "theme-4":
-      return "base__button theme-4__button";
-    default:
-      return "base__button";
-  }
-}
-
 export function ThemedButton({ children, onClick }: ThemedButtonProps) {
+  const className = clsx("base__button", {
+    [`${import.meta.env.VITE_THEME}__button`]: !!import.meta.env.VITE_THEME,
+  });
+
   function handleClick(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     onClick();
   }
 
   return (
-    <button className={getClassNames()} onClick={handleClick}>
+    <button className={className} onClick={handleClick}>
       {children}
     </button>
   );
