@@ -70,7 +70,16 @@ function transformResultFormatter(code: string): TransformResult {
 }
 
 export default function themeImporter(options: ThemeImporterOptions = {}): Plugin {
-  const { include = [], exclude = [], themeName, forceThemeCss } = options;
+  const themeList = ["theme-1", "theme-2", "theme-3", "theme-4"];
+
+  if (!!options.themeName && !themeList.includes(options.themeName)) {
+    throw new Error(
+      `Invalid VITE_THEME provided. Expected one of: ${themeList.join(", ")}.`
+    );
+  }
+
+  const { include = [], exclude = [], themeName = "theme-1", forceThemeCss } = options;
+
   const filter = createFilter(include, exclude);
 
   return {
