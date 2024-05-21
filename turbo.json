@@ -1,0 +1,18 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["VITE_THEME"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["build/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "type-check": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

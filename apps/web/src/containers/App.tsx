@@ -1,4 +1,4 @@
-import { ThemedButton } from "../ui/button";
+import { ThemedButton } from "@repo/ui/button";
 
 function App() {
   return (
