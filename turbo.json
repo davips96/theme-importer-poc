@@ -6,10 +6,16 @@
       "dependsOn": ["^build"],
       "outputs": ["build/**"]
     },
+    "serve": {
+      "dependsOn": ["start"]
+    },
     "lint": {
       "outputs": []
     },
     "type-check": {},
+    "start": {
+      "dependsOn": ["build"]
+    },
     "dev": {
       "cache": false,
       "persistent": true
