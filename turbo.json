@@ -1,6 +1,7 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalEnv": ["VITE_THEME"],
+  "experimentalUI": true,
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
