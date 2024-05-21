@@ -35,7 +35,7 @@ importers:
       '@react-router/node':
         specifier: 0.0.0-experimental-13d6d438f
         version: 0.0.0-experimental-13d6d438f(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
-      '@repo/ui':
+      '@repo/shared':
         specifier: workspace:*
         version: link:../../packages/shared
       clsx:

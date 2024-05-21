@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@react-router/node": "0.0.0-experimental-13d6d438f",
-    "@repo/ui": "workspace:*",
+    "@repo/shared": "workspace:*",
     "clsx": "^2.1.1",
     "isbot": "^4",
     "react": "^18.3.1",
