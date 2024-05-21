@@ -15,7 +15,8 @@
   "scripts": {
     "postinstall": "tsup src/index.ts --clean --dts --format cjs,esm",
     "watch": "npm run postinstall -- --watch",
-    "prepublishOnly": "npm run build"
+    "lint": "eslint \"**/*.ts\"",
+    "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
     "vite": "^5.0.0"

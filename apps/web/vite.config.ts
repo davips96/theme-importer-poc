@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { vitePlugin as react } from "@react-router/dev";
 import inspect from "vite-plugin-inspect";
 import themeImporter from "@repo/vite-theme-importer-plugin";
+
 const themeName = process.env.VITE_THEME;
 
 // https://vitejs.dev/config/

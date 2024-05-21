@@ -5,6 +5,7 @@
     "dev": "turbo dev",
     "start": "turbo serve",
     "lint": "turbo lint",
+    "typecheck": "turbo type-check",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "npm-run-all clean:dist clean:node_modules",
     "clean:dist": "rimraf apps/*/build apps/*/dist packages/*/dist",
