@@ -24,7 +24,7 @@
   "devDependencies": {
     "@react-router/dev": "0.0.0-experimental-13d6d438f",
     "@react-router/serve": "0.0.0-experimental-13d6d438f",
-    "@repo/vite-theme-plugin": "workspace:*",
+    "@repo/vite-theme-importer-plugin": "workspace:*",
     "@types/node": "^20.12.11",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",

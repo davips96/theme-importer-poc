@@ -1,7 +1,9 @@
 {
   "name": "@repo/shared",
   "version": "0.0.0",
+  "main": "./index.ts",
   "exports": {
+    ".": "./index.ts",
     "./ui/button": "./ui/button/index.tsx"
   },
   "license": "MIT",

@@ -1,9 +1,7 @@
 import { defineConfig } from "vite";
 import { vitePlugin as react } from "@react-router/dev";
 import inspect from "vite-plugin-inspect";
-import themeImporter from "@repo/vite-theme-plugin";
-
-
+import themeImporter from "@repo/vite-theme-importer-plugin";
 const themeName = process.env.VITE_THEME;
 
 // https://vitejs.dev/config/
@@ -18,7 +16,7 @@ export default defineConfig({
   plugins: [
     themeImporter({
       themeName,
-      include: ["../../packages/shared/ui/**/*.tsx"],
+      include: ["../../packages/shared/ui/**/*.ts"],
     }),
     react({
       appDirectory: "src",
