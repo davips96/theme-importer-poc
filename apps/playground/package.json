@@ -4,12 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "start:storybook": "vite preview",
     "storybook": "VITE_CJS_IGNORE_WARNING=true storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build:storybook": "storybook build"
   },
   "dependencies": {
     "@repo/shared": "workspace:*",
