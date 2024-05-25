@@ -58,7 +58,7 @@ function parseImportStatement(fileName: string): string {
 function transformCode(code: string, fileName: string): string {
   try {
     const lines = code.split("\n");
-    const cssImportIndex = lines.findIndex(item => item.includes('.css'));
+    const cssImportIndex = lines.findIndex((item) => item.includes(".css"));
     // Add themed css after the base one.
     const injectedCode = [
       ...lines.splice(0, cssImportIndex + 1),

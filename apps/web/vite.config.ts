@@ -28,7 +28,6 @@ export default defineConfig({
       },
       routes(defineRoutes) {
         return defineRoutes((route) => {
-          route("", "containers/App.tsx", { index: true });
           route("*", "catchAllRoutes.tsx");
         });
       },

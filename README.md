@@ -14,17 +14,19 @@ This simple POC showcases a concept for developing UI components in React that c
 
 This project is a very basic demo for the idea. Running it or building it requires using the `VITE_THEME` environment variable. There are 4 themes the `VITE_THEME` variable accepts in this demo, listed below:
 
-- ```theme-1```
-- ```theme-2```
-- ```theme-3```
-- ```theme-4```
+- `theme-1`
+- `theme-2`
+- `theme-3`
+- `theme-4`
 
 ### Usage
 
 This demo uses the `npm` package manager.
 
 #### Start
-```VITE_THEME=[theme] npm run dev```
+
+`VITE_THEME=[theme] npm run dev`
 
 #### Build
-```VITE_THEME=[theme] npm run build```
+
+`VITE_THEME=[theme] npm run build`
