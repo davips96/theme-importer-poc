@@ -25,9 +25,10 @@ const config: StorybookConfig = {
     options: {},
   },
   viteFinal: (config) => {
+    const uiRootPath = getAbsolutePath("@repo/shared");
     config.plugins?.push(themeImporter({
       themeName: process.env.VITE_THEME,
-      include: [join(process.cwd(), "../../packages/shared/ui/**/*.tsx")],
+      include: [`${uiRootPath}/ui/**/*.tsx`],
     }))
     return config
   }

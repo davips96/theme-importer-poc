@@ -7,6 +7,9 @@
       "dependsOn": ["^build"],
       "outputs": ["build/**"]
     },
+    "storybook": {
+      "dependsOn": ["^storybook"]
+    },
     "serve": {
       "dependsOn": ["start"]
     },

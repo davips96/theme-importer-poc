@@ -4,6 +4,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "start": "turbo serve",
+    "storybook": "turbo storybook",
     "lint": "turbo lint",
     "typecheck": "turbo type-check",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
