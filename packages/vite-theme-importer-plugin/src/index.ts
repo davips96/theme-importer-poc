@@ -58,8 +58,14 @@ function parseImportStatement(fileName: string): string {
 function transformCode(code: string, fileName: string): string {
   try {
     const lines = code.split("\n");
-    lines.splice(0, 0, parseImportStatement(fileName));
-    return lines.join("\n");
+    const cssImportIndex = lines.findIndex(item => item.includes('.css'));
+    // Add themed css after the base one.
+    const injectedCode = [
+      ...lines.splice(0, cssImportIndex + 1),
+      parseImportStatement(fileName),
+      ...lines.splice(cssImportIndex),
+    ];
+    return injectedCode.join("\n");
   } catch (error) {
     const message = (error as Error).message ?? "unknown error";
     throw new Error(
