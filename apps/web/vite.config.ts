@@ -17,7 +17,7 @@ export default defineConfig({
   plugins: [
     themeImporter({
       themeName,
-      include: ["../../packages/shared/ui/**/*.ts"],
+      include: ["../../packages/shared/ui/**/*.tsx"],
     }),
     react({
       appDirectory: "src",
