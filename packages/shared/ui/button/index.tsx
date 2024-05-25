@@ -1,7 +1,8 @@
-import "./index.css";
+import { type ReactNode, type MouseEvent } from "react";
 import { clsx } from "clsx";
 
-import { ReactNode, MouseEvent } from "react";
+import "./index.css";
+
 
 export type ThemedButtonProps = {
   children: ReactNode;

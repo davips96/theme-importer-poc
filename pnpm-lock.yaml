@@ -135,10 +135,13 @@ importers:
       react-router-dom:
         specifier: 0.0.0-experimental-e145538f2
         version: 0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-server-dom-diy:
+        specifier: ^0.0.0-6ba8c1f35-20240510
+        version: 0.0.0-6ba8c1f35-20240510(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@react-router/dev':
         specifier: 0.0.0-experimental-e145538f2
-        version: 0.0.0-experimental-e145538f2(@react-router/serve@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react-router@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.17.2)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.12)(lightningcss@1.25.0))
+        version: 0.0.0-experimental-e145538f2(@react-router/serve@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react-router@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-server-dom-diy@0.0.0-6ba8c1f35-20240510(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.17.2)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.12)(lightningcss@1.25.0))
       '@react-router/serve':
         specifier: 0.0.0-experimental-e145538f2
         version: 0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
@@ -2269,6 +2272,10 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
+  acorn-loose@8.4.0:
+    resolution: {integrity: sha512-M0EUka6rb+QC4l9Z3T0nJEzNOO7JcoJlYMrBlyBCiFSXRyxjLKayd4TbQs2FDRWQU1h9FR7QVNHt+PEaoNL5rQ==}
+    engines: {node: '>=0.4.0'}
+
   acorn-walk@7.2.0:
     resolution: {integrity: sha512-OPdCF6GsMIP+Az+aWfAAOEt2/+iVDKE7oy6lJ098aoe59oAmK76qV6Gw60SbZ8jHuG2wH058GF4pLFbYamYrVA==}
     engines: {node: '>=0.4.0'}
@@ -4366,6 +4373,13 @@ packages:
     peerDependenciesMeta:
       react-dom:
         optional: true
+
+  react-server-dom-diy@0.0.0-6ba8c1f35-20240510:
+    resolution: {integrity: sha512-ExICMRKlgoz1A9fuMJprxISYezO2SKYITutzkyGjUQriJMsJI9RHqnJbW6dhT0CDbjE4ELg8WF7R/d1uHb5uWw==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      react: 19.0.0-canary-6ba8c1f35-20240510
+      react-dom: 19.0.0-canary-6ba8c1f35-20240510
 
   react-style-singleton@2.2.1:
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
@@ -6565,7 +6579,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.2
 
-  '@react-router/dev@0.0.0-experimental-e145538f2(@react-router/serve@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react-router@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.17.2)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.12)(lightningcss@1.25.0))':
+  '@react-router/dev@0.0.0-experimental-e145538f2(@react-router/serve@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react-router@0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-server-dom-diy@0.0.0-6ba8c1f35-20240510(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(rollup@4.17.2)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.12)(lightningcss@1.25.0))':
     dependencies:
       '@babel/core': 7.24.5
       '@babel/generator': 7.24.5
@@ -6597,6 +6611,7 @@ snapshots:
       unplugin-rsc: 0.0.9(rollup@4.17.2)
     optionalDependencies:
       '@react-router/serve': 0.0.0-experimental-e145538f2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
+      react-server-dom-diy: 0.0.0-6ba8c1f35-20240510(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       typescript: 5.4.5
       vite: 5.2.11(@types/node@20.12.12)(lightningcss@1.25.0)
     transitivePeerDependencies:
@@ -7722,6 +7737,10 @@ snapshots:
       acorn: 7.4.1
 
   acorn-jsx@5.3.2(acorn@8.11.3):
+    dependencies:
+      acorn: 8.11.3
+
+  acorn-loose@8.4.0:
     dependencies:
       acorn: 8.11.3
 
@@ -9936,6 +9955,12 @@ snapshots:
       react: 18.3.1
       turbo-stream: 2.0.1
     optionalDependencies:
+      react-dom: 18.3.1(react@18.3.1)
+
+  react-server-dom-diy@0.0.0-6ba8c1f35-20240510(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      acorn-loose: 8.4.0
+      react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
   react-style-singleton@2.2.1(@types/react@18.3.2)(react@18.3.1):

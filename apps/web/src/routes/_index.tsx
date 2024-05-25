@@ -1,5 +1,5 @@
 import { ThemedButton } from "@repo/shared/ui/button";
-import { MetaFunction, LoaderFunctionArgs, useLoaderData } from "react-router";
+import { type MetaFunction, type LoaderFunctionArgs, useLoaderData } from "react-router";
 
 export const meta: MetaFunction = () => {
   return [
