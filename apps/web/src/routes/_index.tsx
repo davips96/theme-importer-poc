@@ -9,11 +9,11 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = (_args: LoaderFunctionArgs) => {
-  return { title: "Theme Importer POC"}
-}
+  return { title: "Theme Importer POC" };
+};
 
 export default function App() {
-  const data = useLoaderData() as Awaited<ReturnType<typeof loader>>
+  const data = useLoaderData() as Awaited<ReturnType<typeof loader>>;
   return (
     <>
       <h1>{data.title}</h1>
