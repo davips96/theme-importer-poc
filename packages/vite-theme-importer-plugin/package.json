@@ -5,7 +5,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -13,7 +17,7 @@
   ],
   "private": true,
   "scripts": {
-    "postinstall": "tsup src/index.ts --clean --dts --format cjs,esm",
+    "postinstall": "tsup src/index.ts --dts --format cjs,esm --no-splitting",
     "watch": "npm run postinstall -- --watch",
     "lint": "eslint \"**/*.ts\"",
     "type-check": "tsc --noEmit"
@@ -22,6 +26,7 @@
     "vite": "^5.0.0"
   },
   "devDependencies": {
-    "tsup": "^8.0.2"
+    "tsup": "^8.0.2",
+    "vite": "^5.0.0"
   }
 }

@@ -1,18 +1,22 @@
 import { ThemedButton } from "@repo/shared/ui/button";
-import { LoaderFunctionArgs, useLoaderData } from "react-router";
+import { MetaFunction, LoaderFunctionArgs, useLoaderData } from "react-router";
 
-export function loader(args: LoaderFunctionArgs) {
-  console.log(args);
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Theme Importer POC" },
+    { name: "description", content: "Theme Importer POC" },
+  ];
+};
 
-  return { title: "Theme Importer POC" };
+export const loader = (_args: LoaderFunctionArgs) => {
+  return { title: "Theme Importer POC"}
 }
 
 export default function App() {
-  const loaderData = useLoaderData()<typeof loader>;
-
+  const data = useLoaderData() as Awaited<ReturnType<typeof loader>>
   return (
     <>
-      <h1>{loaderData.title}</h1>
+      <h1>{data.title}</h1>
       <div className="card">
         <p>
           The value <code>VITE_THEME</code> determines the color the button
