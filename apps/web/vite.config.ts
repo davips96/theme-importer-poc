@@ -27,12 +27,7 @@ export default defineConfig({
         v3_relativeSplatPath: true,
         v3_throwAbortReason: true,
         // unstable_serverComponents: true,
-      },
-      routes(defineRoutes) {
-        return defineRoutes((route) => {
-          route("*", "catchAllRoutes.tsx");
-        });
-      },
+      }
     }),
     inspect(),
     tsconfigPaths(),
