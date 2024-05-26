@@ -9,14 +9,14 @@ export const meta: MetaFunction = () => {
 };
 
 export function loader (_args: LoaderFunctionArgs) {
-  return "Theme Importer POC";
+  return {title: "Theme Importer POC"};
 };
 
 export default function App() {
-  const title = useLoaderData() as Awaited<ReturnType<typeof loader>>;
+  const data = useLoaderData() as Awaited<ReturnType<typeof loader>>;
   return (
     <>
-      <h1>{title}</h1>
+      <h1>{data.title}</h1>
       <div className="card">
         <p>
           The value <code>VITE_THEME</code> determines the color the button
