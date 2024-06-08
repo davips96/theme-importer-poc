@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "start:storybook": "vite preview",
-    "storybook": "VITE_CJS_IGNORE_WARNING=true storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build"
   },
   "dependencies": {
