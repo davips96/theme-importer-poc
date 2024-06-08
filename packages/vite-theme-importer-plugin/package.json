@@ -1,0 +1,32 @@
+{
+  "name": "@repo/vite-theme-importer-plugin",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "private": true,
+  "scripts": {
+    "postinstall": "tsup src/index.ts --dts --format cjs,esm --no-splitting",
+    "watch": "npm run postinstall -- --watch",
+    "lint": "eslint \"**/*.ts\"",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "vite": "^5.0.0"
+  }
+}

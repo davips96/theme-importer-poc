@@ -11,8 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-build
-.turbo
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +22,5 @@ build
 *.njsproj
 *.sln
 *.sw?
+
+*storybook.log
